@@ -299,8 +299,13 @@ def add_product():
     conn.close()
 
     return redirect(url_for("home"))
+init_db()
 
 if __name__ == "__main__":
-    init_db()
+    print("Maposh16 is running live at http://127.0.0.1:8080")
+    app.run(host="127.0.0.1", port=8080, debug=False)
+
+
+if __name__ == "__main__":
     print("Maposh16 is running live at http://127.0.0.1:8080")
     app.run(host="127.0.0.1", port=8080, debug=False)
